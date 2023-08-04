@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  name:string="Abhishek"
   title = 'angular_codes';
 
-  
+  Pdata:any
 
-  
-  
+  SendData(val:any){
+    this.Pdata=val
+  }
+
 }
