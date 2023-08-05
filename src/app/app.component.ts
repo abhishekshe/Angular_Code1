@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_codes';
-
-  Pdata:any
-
-  SendData(val:any){
-    this.Pdata=val
+ 
+  items: string[];
+  
+  constructor(private dataService: DataService) {
+    this.items=dataService.getData()
+  
   }
+
+  
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,8 +10,13 @@ export class ChildComponent implements OnInit {
   @Input() childData:any
 
   constructor() { }
+  ngOnChanges(){
+    console.log("hello")
+  }
 
   ngOnInit(): void {
   }
+  
+
 
 }
