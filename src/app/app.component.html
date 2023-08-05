@@ -1,7 +1,6 @@
-<h1>Parent Component</h1>
+<!-- {{items}} -->
+<ol>
+    <li *ngFor="let item of items">{{ item }}</li>
+</ol>
 
-<input type="text" #refvar>
-<button (click)="SendData(refvar.value)">send</button>
-
-<app-child [childData]="Pdata"></app-child>
 
